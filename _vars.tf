@@ -14,10 +14,10 @@ variable "ado_org_service_url" {
 # Local variables
 
 locals {
-  project = "robotshop"
-  env     = terraform.workspace
-  region   = "asse"
-  location = "Southeast Asia"
+  project   = "robotshop"
+  env       = terraform.workspace
+  region    = "asse"
+  location  = "Southeast Asia"
 
   publisher_name  = "nanotech"
   publisher_email = "amran@nanotech.cloudns.asia"
@@ -37,7 +37,7 @@ locals {
   env_code_branch = local.env_code_branches[local.env]
   config_env_name = local.config_env_names[local.env]
 
-  storage_account_name = "ltprodstafunc01"
+  storage_account_name = "robotshopsta01"
 
   service_plan_name    = "asp-${local.project}-${local.env}-${local.region}-001"
   logaw_name           = "log-${local.project}-${local.env}-${local.region}-001"
